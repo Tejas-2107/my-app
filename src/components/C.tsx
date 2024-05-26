@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { CreateContext } from './B.tsx'
 
-const C = ({greetMessage}:any) => {
+const C = () => {
+  const useCon = useContext(CreateContext);
+  console.log(useCon)
   return (
     <div>
-      <h1>{greetMessage}</h1>
+      <h1>{useCon}</h1>
     </div>
   )
 }
